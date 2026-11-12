@@ -1,0 +1,25 @@
+# --- core (required) ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pydantic==2.9.2
+python-dotenv==1.0.1
+python-multipart==0.0.9
+
+# --- parsing ---
+pandas==2.2.3
+PyMuPDF==1.24.10
+
+# --- optional: everything below degrades gracefully if missing ---
+anthropic==0.39.0          # LLM routing + narration  (fallback: keyword routing)
+chromadb==0.5.5            # scheme prose retrieval   (fallback: SQL-only answers)
+prophet==1.1.6             # advanced forecasting     (fallback: moving average)
+pymysql==1.1.1             # MySQL driver             (fallback: SQLite)
+twilio==9.3.2              # WhatsApp channel
+openai-whisper==20240930   # voice: speech -> text
+gTTS==2.5.3                # voice: text -> speech
+streamlit==1.39.0          # demo UI
+
+# --- dev ---
+pytest==8.3.3
+httpx==0.27.2
